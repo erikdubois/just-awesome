@@ -1,4 +1,12 @@
 ## Material and Mouse driven theme for [AwesomeWM 4.3](https://awesomewm.org/)
+
+
+## this github will never be updated
+This is part of a workflow tutorial
+
+https://youtu.be/omxHf0mu5dU
+
+
 ### Original design by PapyElGringo, I modified it removing sidebar and condensing the bars to a single top panel. 
 
 Note: This fork focuses on streamlining the config and adding some Quality of Life touches to the theme.
