@@ -405,8 +405,8 @@ local globalKeys =
   ),
   -- File Manager
   awful.key(
-    {modkey},
-    'e',
+    {modkey, 'Shift'},
+    'Return',
     function()
       awful.util.spawn(apps.default.files)
     end,
