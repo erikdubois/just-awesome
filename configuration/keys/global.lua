@@ -50,21 +50,21 @@ local globalKeys =
     end,
     {description = 'Show main menu', group = 'awesome'}
   ),
+  -- awful.key(
+  --   {modkey, 'Shift'},
+  --   'r',
+  --   function()
+  --     awful.spawn('reboot')
+  --   end,
+  --   {description = 'Reboot Computer', group = 'awesome'}
+  -- ),
   awful.key(
-    {modkey, 'Shift'},
-    'r',
+    {modkey},
+    'x',
     function()
-      awful.spawn('reboot')
+      awful.spawn('arcolinux-logout')
     end,
-    {description = 'Reboot Computer', group = 'awesome'}
-  ),
-  awful.key(
-    {modkey, 'Shift'},
-    's',
-    function()
-      awful.spawn('shutdown now')
-    end,
-    {description = 'Shutdown Computer', group = 'awesome'}
+    {description = 'ArcoLinux Logout', group = 'awesome'}
   ),
   awful.key(
     {modkey, 'Shift'},
@@ -150,15 +150,15 @@ local globalKeys =
   ),
   -- Standard program
   awful.key(
-    {modkey},
-    'x',
+    {altkey, 'Control'},
+    't',
     function()
       awful.spawn(apps.default.terminal)
     end,
     {description = 'Open a terminal', group = 'launcher'}
   ),
-  awful.key({modkey, 'Control'}, 'r', _G.awesome.restart, {description = 'reload awesome', group = 'awesome'}),
-  awful.key({modkey, 'Control'}, 'q', _G.awesome.quit, {description = 'quit awesome', group = 'awesome'}),
+  awful.key({modkey, 'Shift'}, 'r', _G.awesome.restart, {description = 'reload awesome', group = 'awesome'}),
+  --awful.key({modkey, 'Control'}, 'q', _G.awesome.quit, {description = 'quit awesome', group = 'awesome'}),
   awful.key(
     {altkey, 'Shift'},
     'Right',
