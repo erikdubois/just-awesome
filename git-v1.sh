@@ -16,8 +16,8 @@
 ##################################################################################################################
 
 # checking if I have the latest files from github
-#echo "Checking for newer files online first"
-#git pull
+echo "Checking for newer files online first"
+git pull
 
 # Below command will backup everything inside the project folder
 git add --all .
@@ -35,8 +35,15 @@ git commit -m "$input"
 
 # Push the local files to github
 
-git push -u origin main
+if grep -q main .git/config; then
+	echo "Using main"
+		git push -u origin main
+fi
 
+if grep -q master .git/config; then
+	echo "Using master"
+		git push -u origin master
+fi
 
 echo "################################################################"
 echo "###################    Git Push Done      ######################"
